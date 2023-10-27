@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     for (let i = 1; i <= amount; i++) {
        const currentDelay = delay + i * step;
-      createPromise(i, currentDelay)
+      createPromise(i + 1, currentDelay)
         .then(({ position, delay }) => {
           Notiflix.Notify.success(`✅ Fulfilled promise ${position} in ${delay}ms`)
         })
