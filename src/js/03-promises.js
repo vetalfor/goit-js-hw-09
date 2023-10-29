@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const amount = parseInt(form.querySelector('[name="amount"]').value);
 
     for (let i = 1; i <= amount; i++) {
-       const currentDelay = delay + i * step;
+       const currentDelay = delay + (i - 1) * step;
       createPromise(i, currentDelay)
         .then(({ position, delay }) => {
           Notiflix.Notify.success(`✅ Fulfilled promise ${position} in ${delay}ms`)
